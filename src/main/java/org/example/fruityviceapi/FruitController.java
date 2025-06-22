@@ -20,8 +20,14 @@ public class FruitController {
         return new ResponseEntity<>(fruitService.getAllFruits(), HttpStatus.OK);
     }
 
-    @GetMapping("/{id}")
-    public ResponseEntity<Optional<Fruit>> getOneFruit(@PathVariable int id) {
+    @GetMapping("/id/{id}")
+    public ResponseEntity<Optional<Fruit>> getById(@PathVariable int id) {
         return new ResponseEntity<>(fruitService.getById(id), HttpStatus.OK);
     }
+
+    @GetMapping("/name/{name}")
+    public ResponseEntity<Optional<Fruit>> getByName(@PathVariable String name) {
+        return new ResponseEntity<>(fruitService.getByName(name), HttpStatus.OK);
+    }
+
 }

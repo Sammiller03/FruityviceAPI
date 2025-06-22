@@ -10,5 +10,4 @@ public class FruityviceApiApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(FruityviceApiApplication.class, args);
 	}
-
 }

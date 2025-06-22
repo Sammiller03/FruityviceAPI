@@ -19,4 +19,8 @@ public class FruitService {
         return fruitRepository.findById(id);
     }
 
+    public Optional<Fruit> getByName(String name) {
+        return fruitRepository.findByName(name);
+    }
+
 }

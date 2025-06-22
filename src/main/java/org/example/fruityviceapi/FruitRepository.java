@@ -11,6 +11,5 @@ public interface FruitRepository extends MongoRepository<Fruit, ObjectId> {
 
     Optional<Fruit> findById(Integer id);
 
-
-
+    Optional<Fruit> findByName(String name);
 }
