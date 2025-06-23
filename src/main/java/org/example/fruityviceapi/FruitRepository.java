@@ -11,5 +11,5 @@ public interface FruitRepository extends MongoRepository<Fruit, ObjectId> {
 
     Optional<Fruit> findById(Integer id);
 
-    Optional<Fruit> findByName(String name);
+    Optional<Fruit> findByName(String name); //these method names ie findBy[variable] must match that in the mongo db
 }
