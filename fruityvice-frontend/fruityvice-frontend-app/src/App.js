@@ -1,12 +1,11 @@
 import './App.css';
-import Fruit from './components/Fruit'
+import React, { Component } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
 
-function App() {
-  return (
-    <div className="App">
-      <Fruit/>
-    </div>
-  );
+class App extends Component {
+  render() {
+    // ...
+  }
 }
 
 export default App;
