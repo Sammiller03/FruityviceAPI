@@ -40,6 +40,9 @@
 .item {
   min-width: 33rem;
   text-align: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .container {
@@ -51,4 +54,11 @@
 
 .fruits {
   color: red;
+  display: flex;
+  justify-content: center;
+}
+
+.pomelo-image {
+  width: 100px;
+  height: 100px;
 }

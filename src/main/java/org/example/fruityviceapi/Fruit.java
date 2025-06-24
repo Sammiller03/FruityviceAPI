@@ -24,6 +24,8 @@ public class Fruit {
 
     private Nutrition nutritions;
 
+    private String imageURL;
+
     public ObjectId get_id() {
         return _id;
     }
@@ -78,6 +80,14 @@ public class Fruit {
 
     public void setNutritions(Nutrition nutritions) {
         this.nutritions = nutritions;
+    }
+
+    public String getImageURL() {
+        return imageURL;
+    }
+
+    public void setImageURL(String imageURL) {
+        this.imageURL = imageURL;
     }
 }
 

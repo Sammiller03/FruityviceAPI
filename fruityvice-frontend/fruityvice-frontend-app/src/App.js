@@ -35,14 +35,15 @@ const App = () => {
         <h1 className="fruits">All Fruits</h1>
         <div className="container">
           {items.map((item) => (
-
             <div className="item" key={item._id}>
-              <li>
-                  <strong>Name: {item.name}</strong>
-              </li>
+                <p>{item.name}</p>
+                <div>
+                  <img src={item.imageURL} alt={item.name} style={{ width: 50, height: 50, padding: 10 }} />
+                </div>
             </div>
             
-          ))};
+          ))}
+          
         </div>
       </div>
     );
