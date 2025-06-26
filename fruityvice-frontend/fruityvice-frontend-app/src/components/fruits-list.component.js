@@ -36,7 +36,7 @@ function FruitsList() {
                 <p>{item.name}</p>
                 <div>
                   {/* Wraps the image in a Nav link used to navigate to pages with no loading */}
-                  <NavLink to={`/name/${item.name}`}><img src={item.imageURL} alt="" style={{ width: 50, height: 50, padding: 15 }} /></NavLink>
+                  <NavLink to={`/name/${item.name}`}><img src={item.imageURL} alt="" style={{ width: 50, height: 50, padding: 17 }} /></NavLink>
                 </div>
             </div>
             
