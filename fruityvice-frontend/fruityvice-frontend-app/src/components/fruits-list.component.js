@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "../App.css"; // ../ means go back one directory
 import axios from "axios";
+import { NavLink } from "react-router-dom";
 
 function FruitsList() {
     const [items, setItems] = useState([]); //no items initially
@@ -34,7 +35,8 @@ function FruitsList() {
             <div className="item" key={item._id}>
                 <p>{item.name}</p>
                 <div>
-                  <img src={item.imageURL} alt={item.name} style={{ width: 50, height: 50, padding: 10 }} />
+                  {/* Wraps the image in a Nav link used to navigate to pages with no loading */}
+                  <NavLink to={`/name/${item.name}`}><img src={item.imageURL} alt="" style={{ width: 50, height: 50, padding: 15 }} /></NavLink>
                 </div>
             </div>
             
