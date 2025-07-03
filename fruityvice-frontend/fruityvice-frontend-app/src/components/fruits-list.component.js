@@ -7,7 +7,7 @@ function FruitsList() {
     const [fruits, setFruits] = useState([]); //no items initially
     const [links, setLinks] = useState([]);
 
-    const fetchFruits = (url = 'http://localhost:8080/api/v1/fruits/pageable?page=0&size=20') => {
+    const fetchFruits = (url = 'http://localhost:8080/api/v1/fruits/pageable?page=0&size=10') => {
       axios.get(url).then(response => {
         const data = response.data;
         setFruits(data._embedded.fruitList);
@@ -25,18 +25,14 @@ function FruitsList() {
     return (
       <div className="parent">
         <h1 className="fruits">All Fruits</h1>
-        <div className="container">
+        <div className="">
           {fruits.map((fruit) => (
             <div className="item" key={fruit._id}>
-                <p>{fruit.name}</p>
-                <div>
-                  {/* Wraps the image in a Nav link used to navigate to pages with no loading */}
-                  <NavLink to={`/name/${fruit.name}`}><img src={fruit.imageURL} alt="" style={{ width: 50, height: 50, padding: 17 }} /></NavLink>
-                </div>
+              {/* Wraps the image in a Nav link used to navigate to pages with no loading */}
+              <NavLink to={`/name/${fruit.name}`}><img src={fruit.imageURL} alt="" style={{ width: 50, height: 50, padding: 17}}/></NavLink>
+              <h2 className="align-center">{fruit.name}</h2>
             </div>
-            
           ))}
-          
         </div>
 
         <div className="flex justify-center gap-2 mt-6">
