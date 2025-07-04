@@ -24,7 +24,7 @@ function FruitsList() {
 
     return (
       <div className="parent">
-        <h1 className="fruits">All Fruits</h1>
+        <h1 className="fruits font-sans">All Fruits</h1>
         <div className="">
           {fruits.map((fruit) => (
             <div className="item" key={fruit._id}>
