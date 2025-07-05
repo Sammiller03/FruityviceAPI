@@ -46,7 +46,6 @@
 
 .item {
   width: 55%;
-  border: 2px solid black;
   margin: 20px auto;
   padding: 25px;
   text-align: left;
@@ -55,12 +54,6 @@
   align-items: center;
   box-sizing: border-box;
   flex-direction: row;
-}
-
-.fruits {
-  color: red;
-  display: flex;
-  justify-content: center;
 }
 
 .fruit-detail-container {

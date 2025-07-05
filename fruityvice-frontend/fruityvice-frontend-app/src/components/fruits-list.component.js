@@ -24,29 +24,29 @@ function FruitsList() {
 
     return (
       <div className="parent">
-        <h1 className="fruits font-sans">All Fruits</h1>
+        <h1 className="text-center text-red-500 font-semibold text-3xl p-4">All Fruits</h1>
         <div className="">
           {fruits.map((fruit) => (
-            <div className="item" key={fruit._id}>
+            <div className="item rounded-md bg-gray-200 shadow-md" key={fruit._id}>
               {/* Wraps the image in a Nav link used to navigate to pages with no loading */}
-              <NavLink to={`/name/${fruit.name}`}><img src={fruit.imageURL} alt="" style={{ width: 50, height: 50, padding: 17}}/></NavLink>
-              <h2 className="align-center">{fruit.name}</h2>
+              <NavLink to={`/name/${fruit.name}`}><img src={fruit.imageURL} alt="" style={{ width: 100, height: 100, padding: 20}}/></NavLink>
+              <h2 className="align-center font-medium text-xl">{fruit.name}</h2>
             </div>
           ))}
         </div>
 
-        <div className="flex justify-center gap-2 mt-6">
+        <div className="flex justify-center gap-8 mt-6 p-4">
           {links.first && (
-          <button onClick={() => fetchFruits(links.first.href)} className="btn">First</button>
+          <button onClick={() => fetchFruits(links.first.href)} className="rounded-sm p-4 bg-violet-300 font-semibold shadow-md">First</button>
           )}
           {links.prev && (
-            <button onClick={() => fetchFruits(links.prev.href)} className="btn">Previous</button>
+            <button onClick={() => fetchFruits(links.prev.href)} className="rounded-sm p-4 bg-violet-300 font-semibold shadow-md">Previous</button>
           )}
           {links.next && (
-            <button onClick={() => fetchFruits(links.next.href)} className="btn">Next</button>
+            <button onClick={() => fetchFruits(links.next.href)} className="rounded-sm p-4 bg-violet-300 font-semibold shadow-md">Next</button>
           )}
           {links.last && (
-            <button onClick={() => fetchFruits(links.last.href)} className="btn">Last</button>
+            <button onClick={() => fetchFruits(links.last.href)} className="rounded-sm p-4 bg-violet-300 font-semibold shadow-md">Last</button>
           )}
         </div>
 
